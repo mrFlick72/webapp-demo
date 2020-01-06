@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  webapp:
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+    image: mrflick72/webapp-demo:latest
+    ports:
+    - 8080:8080
